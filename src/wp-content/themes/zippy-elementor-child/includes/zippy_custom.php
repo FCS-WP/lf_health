@@ -9,3 +9,8 @@ function shin_scripts()
 
     wp_enqueue_script('main-scripts-js', THEME_URL . '-child' . '/assets/dist/js/main.min.js', array('jquery'), $version, true);
 }
+
+add_filter('woocommerce_breadcrumb_defaults', function ($defaults) {
+    $defaults['delimiter'] = ' <span class="breadcrumb_ic"></span> ';
+    return $defaults;
+});
