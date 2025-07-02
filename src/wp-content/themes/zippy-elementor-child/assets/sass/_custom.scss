@@ -9,5 +9,58 @@
     border-radius: 50%;
   }
 }
-.customer_review_item .elementor-icon-box-icon{position: absolute;top: 0;left: 0;}
-.breadcrumb_ic{width: 8px;height: 8px;border-top: 2px solid var( --e-global-color-text );border-right: 2px solid var( --e-global-color-text );transform: rotate(45deg);display: inline-block;margin: 0 4px 1px 2px;}
+
+.customer_review_item {
+  .elementor-icon-box-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.breadcrumb_ic {
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid var(--e-global-color-text);
+  border-right: 2px solid var(--e-global-color-text);
+  transform: rotate(45deg);
+  display: inline-block;
+  margin: 0 4px 1px 2px;
+}
+
+.page-numbers {
+  padding: 8px 20px;
+  background-color: var(--e-global-color-primary);
+  color: var(--e-global-color-text);
+  font-weight: 700;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: inline-block;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.elementor-pagination {
+  margin-top: 40px;
+}
+
+.top_info {
+  .woocommerce-breadcrumb {
+    color: var(--e-global-color-text);
+
+    a {
+      color: #fff;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.elementor-tab-title {
+  display: flex;
+  align-items: center;
+}
