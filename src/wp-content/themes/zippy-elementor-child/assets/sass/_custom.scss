@@ -1,15 +1,46 @@
+// =================== Variables ===================
+$primary-color: var(--e-global-color-primary);
+$text-color: var(--e-global-color-text);
+
+// =================== Layout & Header ===================
 .h_right {
-  max-width: 112px;
+  max-width: 150px;
 }
 
 .h_cart_ic {
   a {
     padding: 8px;
-    background-color: var(--e-global-color-text);
+    background-color: $text-color;
     border-radius: 50%;
   }
 }
 
+// =================== Breadcrumb ===================
+.breadcrumb_ic {
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid $text-color;
+  border-right: 2px solid $text-color;
+  transform: rotate(45deg);
+  display: inline-block;
+  margin: 0 4px 1px 2px;
+}
+
+.top_info {
+  .woocommerce-breadcrumb {
+    color: $text-color;
+
+    a {
+      color: #fff;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// =================== Review Box ===================
 .customer_review_item {
   .elementor-icon-box-icon {
     position: absolute;
@@ -18,20 +49,11 @@
   }
 }
 
-.breadcrumb_ic {
-  width: 8px;
-  height: 8px;
-  border-top: 2px solid var(--e-global-color-text);
-  border-right: 2px solid var(--e-global-color-text);
-  transform: rotate(45deg);
-  display: inline-block;
-  margin: 0 4px 1px 2px;
-}
-
+// =================== Pagination ===================
 .page-numbers {
   padding: 8px 20px;
-  background-color: var(--e-global-color-primary);
-  color: var(--e-global-color-text);
+  background-color: $primary-color;
+  color: $text-color;
   font-weight: 700;
   border-radius: 5px;
   transition: 0.3s;
@@ -46,21 +68,48 @@
   margin-top: 40px;
 }
 
-.top_info {
-  .woocommerce-breadcrumb {
-    color: var(--e-global-color-text);
+// =================== Tabs ===================
+.elementor-tab-title {
+  display: flex;
+  align-items: center;
+}
 
-    a {
-      color: #fff;
+// =================== WooCommerce: Cart & Checkout ===================
+.woocommerce-cart {
+  .wc-proceed-to-checkout {
+    a.checkout-button {
+      background-color: $primary-color;
+      color: $text-color;
 
       &:hover {
-        text-decoration: underline;
+        background-color: $primary-color;
+        color: #fff;
       }
     }
   }
 }
 
-.elementor-tab-title {
-  display: flex;
-  align-items: center;
+.woocommerce,
+.woocommerce-page {
+  #payment {
+    #place_order {
+      background-color: $primary-color;
+      color: $text-color;
+
+      &:hover {
+        background-color: $primary-color;
+        color: #fff;
+      }
+    }
+  }
+}
+
+// =================== Checkout Title ===================
+.checkout-cus {
+  h3 {
+    color: $text-color;
+    font-family: "Montserrat", Sans-serif;
+    font-size: var(--e-global-typography-primary-font-size);
+    font-weight: 700;
+  }
 }
